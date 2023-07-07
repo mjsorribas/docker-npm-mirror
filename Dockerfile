@@ -10,7 +10,7 @@ WORKDIR /var/opt/verdaccio
 COPY [ "src/entrypoint.sh", "/opt/docker/entrypoint.sh" ]
 COPY [ "src/config.yaml", "/var/opt/verdaccio" ]
 
-RUN npm --global install verdaccio@5.20.1 \
+RUN npm install --location=global verdaccio@5.25 \
 	&& chown -R node:node /var/opt/verdaccio \
 	&& chmod -R 700 /var/opt/verdaccio
 
